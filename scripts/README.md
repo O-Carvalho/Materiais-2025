@@ -8,6 +8,7 @@ Rodar na pasta onde estão os arquivos `OS <número>.xls` exportados do ERP, nes
 | 2 | `python3 scripts/consolida.py` | Junta todos os arquivos em `Consolidado OS.xlsx` |
 | 3 | `ANO=2026 PYTHONPATH=scripts python3 scripts/relatorio.py "Relatório Materiais 2026.xlsx"` | Gera o relatório (dashboard, ranking, itens em aberto, por OS e por família) |
 | 4 | `PYTHONPATH=scripts python3 scripts/ied_xlsx.py "Verificação IED SIPROTEC.xlsx"` | Cruza IEDs SIPROTEC, placas com recorte para IED e tipo de projeto por OS |
+| 5 | `PYTHONPATH=scripts python3 scripts/checklist_ied.py "Conferência IED por OS.xlsx"` | Planilha de conferência: OS com placa para IED, se tem IED e coluna "Faz sentido?" para preencher |
 
 - `familias.py`: regras que agrupam os materiais em famílias (edite para ajustar).
 - `ied.py`: regras da verificação de IED (códigos SIPROTEC, clientes, painéis auxiliares).
