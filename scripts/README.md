@@ -10,6 +10,8 @@ Rodar na pasta onde estão os arquivos `OS <número>.xls` exportados do ERP, nes
 | 4 | `PYTHONPATH=scripts python3 scripts/ied_xlsx.py "Verificação IED SIPROTEC.xlsx"` | Cruza IEDs SIPROTEC, placas com recorte para IED e tipo de projeto por OS |
 | 5 | `PYTHONPATH=scripts python3 scripts/checklist_ied.py "Conferência IED por OS.xlsx"` | Planilha de conferência: OS com placa para IED, se tem IED e coluna "Faz sentido?" para preencher |
 
+**Painéis em montagem (MEGA → SAP):** `python3 scripts/base_montagem.py "Paineis em montagem/Base Materiais - Painéis em Montagem.xlsx" <arquivos de entrada .xlsx>` junta os arquivos, remove linhas duplicadas e ordena por OS numa aba só.
+
 - `familias.py`: regras que agrupam os materiais em famílias (edite para ajustar).
 - `ied.py`: regras da verificação de IED (códigos SIPROTEC, clientes, painéis auxiliares).
 
