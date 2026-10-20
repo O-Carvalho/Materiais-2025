@@ -5,7 +5,7 @@ CLIENTES = ["CPFL","CTEEP","NEOENERGIA","ENEL","RME","CERAM","SNEF","TECMON","ED
 
 def analisa(c):
     c = c.copy(); m = c.Material.str.upper(); vivo = c["Situação"] != "Cancelada"
-    is_rele = m.str.startswith(("RELE DIGITAL","RELE DIGTIAL","RELE DE PROTECAO"))
+    is_rele = m.str.startswith(("RELE DIGITAL","RELE DIGTIAL","RELE DE PROTECAO","IED "))
     c["_sip"] = is_rele & m.str.contains("SIEMENS") & m.str.contains(SIP.replace("(", "(?:", 1), regex=True)
     c["_outro"] = is_rele & ~c["_sip"]
     c["_vaga"] = m.str.contains(r"^P[FP]F.*\bIED\b", regex=True)
